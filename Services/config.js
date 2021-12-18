@@ -1,6 +1,0 @@
-module.exports={
-
-    AUTH_SID: "AC55cc6bdf53094a175b751a8131a99aa4",
-    AUTH_TOKEN: "63bc8673270e28c479dcb6a184af0970",
-    PHONE:"+13155414138"
-}
