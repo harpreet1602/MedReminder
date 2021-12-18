@@ -19,6 +19,12 @@ app.use(express.json());
 app.use('/api/medicine', require('./Routes/medicineRouter'));
 app.use('/api/user', require('./Routes/userRouter'));
 
+app.get('/voice',require('./Services/voice'));
+
+const makeCall=require('./Services/MAKE_CALL');
+
+makeCall();
+
 app.listen(PORT, () => {
     console.log("Listening on port " + PORT);
 })

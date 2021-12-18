@@ -6,7 +6,7 @@ let getResponce=(req,res)=>{
         
       voiceResponse.say('Hello from your pals at Twilio! Have fun.');
 
-    res.headers('Content-Type', 'text/xml' );
+    res.set('Content-Type', 'text/xml' );
     res.send(voiceResponse.toString());
 }
 
