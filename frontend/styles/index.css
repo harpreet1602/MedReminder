@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #f3f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+.nav{
+    background-color: #32aeb1;
+    color:white;
+    display:flex;
+    align-items: center;
+    height:3rem;
+}
+
+.navHeading{
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+.navHeading:hover{
+    color: rgb(204, 189, 189);
+}
+
+.navOptions{
+    position: absolute;
+    right: 10px;
+    display:flex;
+    width:25rem;
+    /* border: 1px solid; */
+    justify-content: space-evenly;
+}
+
+
+.navOptions div:hover{
+    color: rgb(204, 189, 189);
+}
+
+.container{
+    height: 100vh;
+}
+.headingDiv{
+    display: flex; 
+    align-items: center; 
+     justify-content: center;
+    position: relative;
+}
+
+.headingDiv > button{
+    position: absolute;
+    right:10rem;
+    height: 2rem;
+    width: 10rem;
+    background-color: #32aeb1;
+    color: white;
+}
+
+.footer{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top:5rem;
+    background: grey;
+    /* color: white; */
+}
+.list{
+    margin: auto;
+    /* border: 1px solid; */
+    width:45rem;
+    text-align: center;
+    margin-bottom:2rem;
+
+}
+
+.head{
+    text-align: center;
+}
+.text{
+    text-align: center;
+}
+
+.home{
+    display: flex;
+}
+
+.home img{
+    width: 55vw;
+    /* height:92.5vh; */
+    padding:5rem;
+    border-radius: 50%;
+}
+.time{
+    width:40% !important;
+    margin-bottom: 1rem;
+}
+td{
+    padding: 1rem;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=date] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the done button */
+.form-container .btndone {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .btncancel {
+    background-color: red;
+    width: 100%;
+    margin-bottom:10px;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    
+  }
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+.home div p:nth-child(1){
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.home div p:nth-child(2){
+    font-size: 1rem;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

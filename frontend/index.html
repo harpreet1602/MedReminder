@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedReminder</title>
+    <link rel = "stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="nav">
+        <div class="navHeading"><a href="/#home">MedReminder</a></div>
+        <div class="navOptions">
+            <div><a href="/#home">Home</a></div>
+            <div><a href="/#medicine">Add Medicine</a></div>
+            <div><a href="/#reminder">Add Reminder</a></div>
+            <div><a href="/#contact">Contact us</a></div>
+        </div>
+    </div>
+ 
+    <div class="home" id="/#home">
+        <div>
+            <p>We are to sort your medicine course</p>
+            <p>All of us need to rely on medicines to get rid of illnesses ranging from the good old cold/cough to fever to even serious ones like cancer. Naturally, it becomes difficult to keep track of the names and expiry dates of tons of medicines that fill our medicine box. Often, all of us forget to take our medicines on time especially teenagers and old-aged people. If a doctor asks us about the medicines we've had in the past for a certain illness, it becomes a herculean task to remember the strange names of the medicines. Don't worry, we've come to the rescue!</p>
+        </div>
+        <img src="./images/img.jpeg">
+    </div>
+ 
+      <!-- Add Medicine -->
+      <!-- <h1 class="heading">Add Medicine</h1>
+      <form>
+          <label class="label">Name:</label>
+          <input type="text" class="field">
+          <label class="label">Expiry Date:-</label>
+          <input type="date" class="field">
+      </form> -->
+ 
+    <!-- Reminder Medicine -->
+    <!-- <h1 class="heading">Add Reminder</h1>
+    <form>
+        <label class="label">Name:</label>
+        <input type="text" class="field">
+        <label class="label">Time in hours:</label>
+        <input type="number" class="field">
+        <input type="radio" class="time" name="time" value="am">
+        <label>AM</label>
+        <input type="radio" class="time" name="time" value="pm">
+        <label>PM</label>
+        <label class="label">Frequency</label>
+ 
+    </form> -->
+ 
+    <div class="container">
+
+    <div class="headingDiv">
+        <h1 class="heading" id="medicine">List of Medicines</h1>
+        <button onclick="openForm()">Add Medicine</button>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Medicine Details</h1>
+ 
+              <label for="illness"><b>Illness</b></label>
+              <input type="text" placeholder="Enter Illness" name="illness" required>
+ 
+              <label for="medName"><b>Name</b></label>
+              <input type="text" placeholder="Enter Medicine Name" name="medName" required>
+ 
+              <label for="medDuration"><b>Medicine Consumption Date</b></label>
+              <input type="date" placeholder="Enter when you first had the medicine(optional)" name="medDuration">
+ 
+              <label for="medExpiry"><b>Medicine Expiry Date</b></label>
+              <input type="date" placeholder="Enter Medicine Expiry" name="medExpiry" required>
+ 
+              <button type="submit" class="btndone">Done</button>
+              <button type="button" class="btncancel" onclick="closeForm()">Cancel</button>
+            </form>
+          </div>
+    </div>
+ 
+    <table class="list">
+        <tr>
+            <th>Illness</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Expiry</th>
+        </tr>
+        <tr>
+            <td>Cough</td>
+            <td>Honitus</td>
+            <td>2 months</td>
+            <td>18.12.21</td>
+        </tr>
+    </table>
+
+
+    </div>
+ 
+
+    <div class="container">
+
+
+    <div class="headingDiv">
+    <h1 class="heading" id="reminder">List of Reminders</h1>
+    <button onclick="openForm1()">Add Reminder</button>
+    <div class="form-popup" id="myForm1">
+        <form action="/action_page.php" class="form-container">
+          <h1>Reminder Details</h1>
+
+          <label for="illness"><b>Illness</b></label>
+          <input type="text" placeholder="Enter Illness" name="illness" required>
+
+          <label for="medName"><b>Name</b></label>
+          <input type="text" placeholder="Enter Medicine Name" name="medName" required>
+
+          <label for="medTime"><b>Time</b></label>
+          <br>
+          <!-- <input type="text" class="time" placeholder="(1-12 format)" name="medTime"> -->
+        
+                
+        <select name="time" class="time" id="time">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+          <input type = "radio" name="time" value="am">AM
+          <input type = "radio" name="time" value="pm">PM
+
+          <label for="medRepetition"><b>Medicine Repetition</b></label>
+          <br>
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          S
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          M
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          T
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          W
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          T
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          F
+          <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
+          S
+          <br><br>
+          <button type="submit" class="btndone">Done</button>
+          <button type="button" class="btncancel" onclick="closeForm1()">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <table class="list">
+        <tr>
+            <th>Illness</th>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Repetition</th>
+        </tr>
+        <tr>
+            <td>Cough</td>
+            <td>Honitus</td>
+            <td>8 AM</td>
+            <td>Everyday</td>
+        </tr>
+    </table>
+
+    </div>
+ 
+    <div class="footer">
+        <h1 class="head" id="contact">Contact Us</h1>
+        <div class="text">
+            <p>Phone:- 9988776655</p>
+            <p>Email:- hpsk1602@gmail.com</p>
+            <p>Social Media </p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/Harpreets1602" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://www.instagram.com/harpreet_singh1602/?hl=en" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://twitter.com/Harpree18481180" target="_blank"><i class="fab fa-twitter fa-lg" ></i></a>
+                <a href="https://www.linkedin.com/in/harpreet-singh-810911195/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://www.youtube.com/channel/UCh0JgNDHiwSn30BoJOVn-Fw" target="_blank"><i class="fab fa-youtube fa-lg" ></i></a>
+                <a href="https://cricket-superstars.blogspot.com/" target="_blank"><i class="fab fa-blogger fa-lg" ></i></a>
+                <a href="https://github.com/harpreet1602" target="_blank"><i class="fab fa-github fa-lg" ></i></a>
+                <a href="https://discord.com/channels/@me" target="_blank"><i class="fab fa-discord fa-lg"></i></a>
+              </div>
+        </div>
+    </div>
+ 
+ 
+    <script src="script.js"></script>
+</body>
+</html>
