@@ -1,14 +1,20 @@
-let { AUTH_SID, AUTH_TOKEN, PHONE } = require("../config");
+let makeCall = (userNum) => {
 
-let client = require("twilio")(AUTH_SID, AUTH_TOKEN);
+  let { AUTH_SID, AUTH_TOKEN, PHONE } = require("../config");
 
-client.calls
-  .create({
-    url: "http://127.0.0.1:1337/",
-    to: "+918295475934",
-    from: PHONE,
-  })
-  .then((call) => console.log(call.sid))
-  .catch((err) => {
-    console.log(err);
-  });
+  let client = require("twilio")(AUTH_SID, AUTH_TOKEN);
+
+  client.calls
+    .create({
+      url: "http://127.0.0.1:1337/",
+      to: userNum,
+      from: PHONE,
+    })
+    .then((call) => console.log(call.sid))
+    .catch((err) => {
+      console.log(err);
+    });
+
+}
+
+module.exports = makeCall
