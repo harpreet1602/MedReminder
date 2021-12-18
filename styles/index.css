@@ -56,6 +56,9 @@ body{
     right:10rem;
 }
 
+.footer{
+    padding-bottom: 2rem;
+}
 .list{
     margin: auto;
     /* border: 1px solid; */
@@ -65,7 +68,30 @@ body{
 }
 
 .head{
-
+    text-align: center;
+}
+.text{
+    text-align: center;
 }
 
+.home{
+    display: flex;
+}
 
+.home img{
+    width: 55vw;
+    height:92.5vh;
+}
+
+.home div p:nth-child(1){
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+.home div p:nth-child(2){
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
