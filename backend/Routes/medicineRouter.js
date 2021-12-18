@@ -7,7 +7,7 @@ let medicineRouter = express.Router();
 
 let addMedicine = async (req, res) => {
     try {
-        if (!req.body.name || !req.body.expiry || !req.body.userId) {
+        if (!req.body.name || !req.body.userId) {
             res.status(400).json({
                 message: "Please enter name and expiry"
             })
