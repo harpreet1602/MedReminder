@@ -15,6 +15,13 @@ let medicineSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.ObjectId,
         ref: "userModel"
+    },
+    startDate: {
+        type: String,
+        required: true
+    },
+    illnessName: {
+        type: String,
     }
 });
 
