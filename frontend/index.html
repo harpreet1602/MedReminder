@@ -55,41 +55,35 @@
 
     <div class="headingDiv">
         <h1 class="heading" id="medicine">List of Medicines</h1>
-        <button onclick="openForm()">Add Medicine</button>
+        <button class="addMed" onclick="openForm()">Add Medicine</button>
         <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
+            <form class="form-container">
               <h1>Medicine Details</h1>
  
               <label for="illness"><b>Illness</b></label>
-              <input type="text" placeholder="Enter Illness" name="illness" required>
+              <input type="text" class="illness" placeholder="Enter Illness" name="illnessName" required>
  
               <label for="medName"><b>Name</b></label>
-              <input type="text" placeholder="Enter Medicine Name" name="medName" required>
+              <input type="text" class="medName" placeholder="Enter Medicine Name" name="name" required>
  
               <label for="medDuration"><b>Medicine Consumption Date</b></label>
-              <input type="date" placeholder="Enter when you first had the medicine(optional)" name="medDuration">
+              <input type="date" class="startDate" placeholder="Enter when you first had the medicine(optional)" name="startDate">
  
               <label for="medExpiry"><b>Medicine Expiry Date</b></label>
-              <input type="date" placeholder="Enter Medicine Expiry" name="medExpiry" required>
+              <input type="date" class="expiry" placeholder="Enter Medicine Expiry" name="expiry" required>
  
-              <button type="submit" class="btndone">Done</button>
+              <button type="submit" class="btndone medicine">Done</button>
               <button type="button" class="btncancel" onclick="closeForm()">Cancel</button>
             </form>
           </div>
     </div>
  
-    <table class="list">
+    <table class="list inventory">
         <tr>
             <th>Illness</th>
             <th>Name</th>
             <th>Duration</th>
             <th>Expiry</th>
-        </tr>
-        <tr>
-            <td>Cough</td>
-            <td>Honitus</td>
-            <td>2 months</td>
-            <td>18.12.21</td>
         </tr>
     </table>
 
@@ -104,14 +98,14 @@
     <h1 class="heading" id="reminder">List of Reminders</h1>
     <button onclick="openForm1()">Add Reminder</button>
     <div class="form-popup" id="myForm1">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
           <h1>Reminder Details</h1>
 
           <label for="illness"><b>Illness</b></label>
-          <input type="text" placeholder="Enter Illness" name="illness" required>
+          <input type="text" placeholder="Enter Illness" name="illnessName" class="illnessName" required>
 
           <label for="medName"><b>Name</b></label>
-          <input type="text" placeholder="Enter Medicine Name" name="medName" required>
+          <input type="text" placeholder="Enter Medicine Name" name="medName" class="medName" required>
 
           <label for="medTime"><b>Time</b></label>
           <br>
@@ -133,8 +127,8 @@
             <option value="12">12</option>
         </select>
 
-          <input type = "radio" name="time" value="am">AM
-          <input type = "radio" name="time" value="pm">PM
+          <input type = "radio" name="time" class="am" value="am">AM
+          <input type = "radio" name="time" class="pm" value="pm">PM
 
           <label for="medRepetition"><b>Medicine Repetition</b></label>
           <br>
@@ -153,12 +147,12 @@
           <input type="checkbox" placeholder="Enter Medicine repetition" name="medRepetition" value="sunday" required>
           S
           <br><br>
-          <button type="submit" class="btndone">Done</button>
+          <button type="submit" class="btndone reminder" >Done</button>
           <button type="button" class="btncancel" onclick="closeForm1()">Cancel</button>
         </form>
       </div>
     </div>
-    <table class="list">
+    <table class="list reminderTable">
         <tr>
             <th>Illness</th>
             <th>Name</th>
@@ -195,6 +189,8 @@
     </div>
  
  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

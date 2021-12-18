@@ -6,8 +6,7 @@ let medicineSchema = new mongoose.Schema({
         required: true
     },
     expiry: {
-        type: String,
-        required: true
+        type: String
     },
     alarmTime: {
         type: String
@@ -17,8 +16,7 @@ let medicineSchema = new mongoose.Schema({
         ref: "userModel"
     },
     startDate: {
-        type: String,
-        required: true
+        type: String
     },
     illnessName: {
         type: String,
