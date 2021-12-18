@@ -4,6 +4,7 @@
 body{
     margin: 0;
     background-color: #f3f7fb;
+    position: relative;
 }
 .nav{
     /* background:black; */
@@ -39,6 +40,32 @@ body{
 }
 
 .heading{
-    display:flex;
-    justify-content: center;
+    /* display:flex;
+    justify-content: center; */
 }
+
+.headingDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.headingDiv button{
+    position: absolute;
+    right:10rem;
+}
+
+.list{
+    margin: auto;
+    /* border: 1px solid; */
+    width:45rem;
+    text-align: center;
+    margin-bottom:2rem;
+}
+
+.head{
+
+}
+
+
