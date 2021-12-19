@@ -14,7 +14,7 @@ let addMedicine = async (req, res) => {
         }
         let user = await userModel.findOne({ '_id': req.body.userId })
         if (user) {
-            if (!req.body.alarmTime) {
+            if (req.body.alarmTime==undefined) {
                 let medicine = await medicineModel.create(req.body);
                 user.medicines.push(medicine['_id'])
                 let newUser = await user.save();
@@ -28,7 +28,7 @@ let addMedicine = async (req, res) => {
                 let medicine = await medicineModel.create(req.body);
                 user.medicines.push(medicine['_id'])
                 let newUser = await user.save();
-                let alarmBucket = await alarmModel.findOne({ time: req.body.alarmTime })
+                let alarmBucket = await alarmModel.findOne({ time: Number(req.body.alarmTime) })
                 alarmBucket.allMedicines.push(medicine['_id']);
                 let newAlarmBucket = await alarmBucket.save();
                 res.status(200).json({

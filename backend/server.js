@@ -1,6 +1,6 @@
 let { DB_LINK } = require("./config.js");
 
-
+const scheduling = require('./Schedule');
 const express = require('express');
 const app = express();
 let PORT = process.env.PORT || 3000;
@@ -12,6 +12,7 @@ mongoose.connect(DB_LINK).then(() => {
     console.log("err " + err)
 })
 
+scheduling();
 
 app.use('/', express.static(path.join(__dirname, '../frontend')));
 app.use(express.json());
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use('/api/medicine', require('./Routes/medicineRouter'));
 app.use('/api/user', require('./Routes/userRouter'));
 
-app.get('/voice',require('./Services/voice'));
+app.get('/voice', require('./Services/voice'));
 
 // const makeCall=require('./Services/MAKE_CALL');
 
@@ -39,4 +40,3 @@ app.listen(PORT, () => {
 // }
 
 // create();
-

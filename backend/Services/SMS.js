@@ -6,7 +6,7 @@ let sendSMS = (userNum) => {
     client.messages.create({
         to: userNum,
         from: PHONE,
-        body: "testing"
+        body: "please eat your medicine"
     }).then((message) => {
 
         console.log(message.accountSid);

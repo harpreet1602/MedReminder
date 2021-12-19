@@ -1,7 +1,6 @@
-const http = require('http');
+let getResponce=(req,res)=>{
 const twiml = require('twilio').twiml;
 
-let getResponce=(req,res)=>{
   const voiceResponse= new twiml.VoiceResponse()
         
       voiceResponse.say('Hello from your pals at Twilio! Have fun.');
