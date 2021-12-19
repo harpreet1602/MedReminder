@@ -6,7 +6,7 @@ let scheduling = () => {
     let i = 0;
 
     var CronJob = require('cron').CronJob;
-    var alertJob = new CronJob('* * * * * *', function () {
+    var alertJob = new CronJob('0 * * * *', function () {
         remind();
         console.log("HELLO")
     }, null, true, 'Asia/Kolkata')
